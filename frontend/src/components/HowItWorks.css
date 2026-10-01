@@ -1,0 +1,72 @@
+.how-it-works {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.steps-line {
+  position: absolute;
+  top: 5rem;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.step-card {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 216, 255, 0.2);
+}
+
+.step-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps-line {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+}
